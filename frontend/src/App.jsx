@@ -2,18 +2,6 @@ import { useState, useRef } from "react";
 import "./roastMe.css";
 import axios from "axios";
 
-const roasts = [
-  "Your solution runs in O(n²) and so does your dating life. 💀",
-  "You've been on Easy problems for 6 months. My grandma solves faster — she's been dead for 3 years. 🪦",
-  "404: Talent Not Found. We searched everywhere. 🔍",
-  "Your code passes 2/100 test cases. The other 98 are just embarrassed for you. 😬",
-  "You googled 'what is a linked list' at midnight. The linked list cried. 📚",
-  "Your GitHub contribution graph looks like a desert. A barren, hopeless desert. 🏜️",
-  "You've attempted Two Sum 7 times and still got it wrong. That's not even the hard part. 🤦",
-  "Your time complexity is worse than your time management. Both are O(disaster). ⏰",
-  "Bro hit 'run code' and the server asked to be put on Do Not Disturb. 🔕",
-  "Even your brute force solutions are too dumb to be called brute. 🧱",
-];
 
 export default function RoastMe() {
   const [username, setUsername] = useState("");
