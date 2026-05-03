@@ -19,7 +19,7 @@ export default function RoastMe() {
     setLoading(true);
     setRoast(null);
     setTimeout( async () => {
-       const random = await axios.get('http://localhost:3000/roast', {
+       const random = await axios.get('https://roastme-vms4.onrender.com/roast', {
         params : {username : username}
       }); 
        
