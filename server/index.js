@@ -8,12 +8,14 @@ const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY
 });
 
+const PORT = process.env.PORT || 3000;
+
 
 const app = express();
 
 app.use(cors());
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("server running on port 3000");
 })
 
@@ -98,10 +100,15 @@ Days since last solved: ${daysSinceLastSolved}
 Contest rating: ${contestRating}
 
 Rules:
-- Dont mention the Days since last solved directly
+- Dont mention the Days since last solved directly (only hint inactivity indirectly)
 - Maximum 3 sentences.
 - Be savage and sarcastic.
 - Mention the numbers directly.
+- Focus on imbalance (too many easy, too few hard, weak rating, short streak, etc.)
+- If hard problems are low, mock it.
+- If rating is average/low, mock it.
+- If streak is small, mock consistency.
+- Make it sound personal and insulting, not analytical.
 - No explanations, no filler.
 `;
 
